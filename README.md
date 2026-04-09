@@ -20,12 +20,14 @@ README.md	Project documentation file (this file).
 # Usage Instructions
 Policy Data Preparation: 
 Use llm_api.py to send policy text to the LLM API with pre-built prompts.
+
 Use process_policies.py to extract and structure the LLM's output into a format compatible with the panel dataset.
 
 # Dependencies
 Stata:
 Required packages: csdid, reghdfe, estout (install via ssc install if missing)
 Stata version 16 or higher recommended
+
 Python:
 Required libraries: openai (or other LLM API clients), pandas, numpy, json, re
 Python version 3.8 or higher recommended
