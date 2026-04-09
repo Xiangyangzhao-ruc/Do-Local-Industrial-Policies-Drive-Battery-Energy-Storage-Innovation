@@ -3,24 +3,30 @@ This repository provides the BESS policy text processing code, panel data, and S
 
 # File Name	Description
 Baseline Staggered DID.do：Stata do-file for baseline staggered difference-in-differences (DID) estimation, including core regression specifications, parallel trend tests, and robustness checks.
+
 CSDID.do：Stata do-file for Callaway-Sant'Anna DID (CSDID) estimation, a robust method for staggered treatment adoption with heterogeneous treatment effects.
 Industry Chain Spillovers.do：Stata do-file for industry chain spillover effect analysis, examining how policy shocks propagate across upstream/midstram/downstream industries, etc.
+
 Regional Heterogeneity.do：Stata do-file for regional heterogeneity analysis, testing differential policy effects across geographic regions.
+
 llm_api.py：Python script for LLM API integration and prompt engineering. Handles API calls to large language models, constructs standardized prompts for policy analysis, and manages request/response workflows.
+
 process_policies.py：Python script for structured extraction of LLM analysis results. Parses unstructured LLM outputs, standardizes policy coding, and transforms raw model responses into machine-readable, analysis-ready structured data.
+
 panel_data.xlsx：Raw panel dataset used for all regression analyses, containing city-level variables, treatment timing, and control variables.
+
 README.md	Project documentation file (this file).
 
 # Usage Instructions
-1. Policy Data Preparation
+Policy Data Preparation: 
 Use llm_api.py to send policy text to the LLM API with pre-built prompts.
 Use process_policies.py to extract and structure the LLM's output into a format compatible with the panel dataset.
 
 # Dependencies
-Stata
+Stata:
 Required packages: csdid, reghdfe, estout (install via ssc install if missing)
 Stata version 16 or higher recommended
-Python
+Python:
 Required libraries: openai (or other LLM API clients), pandas, numpy, json, re
 Python version 3.8 or higher recommended
 
